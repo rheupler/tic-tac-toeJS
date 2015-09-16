@@ -5,19 +5,28 @@ function setMessage (msg) {
 function switchPlayer() {
   if (turn === "X") {
     turn = "O";
+    computerTurn();
   } else {
     turn = "X"
   }
   setMessage("It's " + turn + "'s turn")
 }
 
-// function computerTurn() {
-//   if (turn === "O") {
+// var computerChoices = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+// var pickChoice = function() {
+//   var choice = computerChoices[Math.floor(Math.random() * 9)];
+//   return choice;
+// };
 //
+// function computerTurn() {
+//   var result = pickChoice();
+//   if (game.xTurn.indexOf(result) === -1) {
+//     game.oTurn.push(result)
+//     document.getElementById(result).innerText = turn;
+//     turn = "X";
 //   }
 // }
-
-
+//
 function nextMove(square) {
   if (square.innerText !== "") {
     alert("Pick another space.")
@@ -26,6 +35,7 @@ function nextMove(square) {
   switchPlayer();
   }
 }
+
 function Game() {
   this.xTurn = [];
   this.oTurn = [];
