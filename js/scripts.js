@@ -11,7 +11,21 @@ function switchPlayer() {
   setMessage("It's " + turn + "'s turn")
 }
 
+// function computerTurn() {
+//   if (turn === "O") {
+//
+//   }
+// }
 
+
+function nextMove(square) {
+  if (square.innerText !== "") {
+    alert("Pick another space.")
+  } else {
+  square.innerText = turn;
+  switchPlayer();
+  }
+}
 function Game() {
   this.xTurn = [];
   this.oTurn = [];
@@ -78,12 +92,3 @@ $(function() {
     window.location.reload();
   })
 })
-
-
-
-
-function nextMove(square) {
-  square.innerText = turn;
-  switchPlayer();
-
-}
