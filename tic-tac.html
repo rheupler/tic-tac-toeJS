@@ -10,8 +10,10 @@
   <body>
     <div id="message"></div>
     <h2 id="turns"></h2>
+    <div class="container">
   <form id=tictactable>
     <table class="table" border="2">
+      <h2 id="message-turn">X Starts</h2>
       <tr>
         <td class="square" id="1" onclick="nextMove(this)"></td>
         <td class="square" id="2" onclick="nextMove(this)"></td>
@@ -28,6 +30,9 @@
         <td class="square" id="9" onclick="nextMove(this)"></td>
       </tr>
     </table>
+
+    <button class="btn btn-warning" id="refresh">Play again!</button>
   </form>
+</div>
   </body>
 </html>
