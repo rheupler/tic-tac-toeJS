@@ -53,6 +53,8 @@ $(function() {
     alert("X WINS")
   } else if ((game.xTurn.indexOf('3') > -1) && (game.xTurn.indexOf('5') > -1) && (game.xTurn.indexOf('7') > -1)) {
     alert("X WINS")
+  } else if (((game.xTurn.length === 4) && (game.oTurn.length === 5)) || ((game.oTurn.length === 4) && (game.xTurn.length === 5))) {
+    alert("Cat's Game")
   }
   });
 
